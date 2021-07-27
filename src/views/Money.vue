@@ -2,69 +2,6 @@
   <div class="nav-wrapper">
     <div class="content">
       <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
-      <p>Money.vue</p>
     </div>
     <Nav></Nav>
   </div>
@@ -77,13 +14,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.nav-wrapper{
+.nav-wrapper {
   border: 1px solid green;
   display: flex;
   flex-direction: column;
   height: 100vh;
 }
-.content{
+
+.content {
   overflow: auto;
   flex-grow: 1;
 }
