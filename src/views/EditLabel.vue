@@ -21,6 +21,7 @@ import {Component} from 'vue-property-decorator';
 import tagListModel from '@/models/tagListModel';
 import FormItem from '@/components/Money/FormItem.vue';
 import Button from '@/components/Button.vue';
+
 @Component({
   components: {Button, FormItem}
 })
@@ -30,17 +31,17 @@ export default class EditLabel extends Vue {
     tagListModel.fetch();
     const tags = tagListModel.data;
     const tag = tags.filter(t => t.id === id)[0];
-    if (tag){
+    if (tag) {
       console.log(tag);
-    }else{
-      this.$router.replace('/404')
+    } else {
+      this.$router.replace('/404');
     }
   }
 };
 </script>
 
 <style lang="scss" scoped>
-.navBar{
+.navBar {
   text-align: center;
   font-size: 16px;
   padding: 12px 16px;
@@ -48,23 +49,24 @@ export default class EditLabel extends Vue {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  > .title{
 
-  }
-  > .leftIcon{
+  > .leftIcon {
     width: 17px;
     height: 17px;
   }
-  > .rightIcon{
+
+  > .rightIcon {
     width: 17px;
     height: 17px;
   }
 }
-.form-wrapper{
+
+.form-wrapper {
   background: white;
   margin-top: 8px;
 }
-.button-wrapper{
+
+.button-wrapper {
   text-align: center;
   padding: 16px;
   margin-top: 28px;
