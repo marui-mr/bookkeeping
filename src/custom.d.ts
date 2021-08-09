@@ -1,10 +1,15 @@
 /* eslint-disable */
+type RootState = {
+  recordList: RecordItem[],
+  tagList: Tag[],
+  currentTag?: Tag
+}
 type RecordItem = {
-  tags: string[]
+  tags: Tag[]
   notes: string
   type: string
   amount: number
-  createdAt?: Date   // 等价于 Date | undefined
+  createdAt?: string
 }
 type Tag = {
   id: string
