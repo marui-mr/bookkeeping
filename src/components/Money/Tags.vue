@@ -15,14 +15,13 @@
 
 <script lang="ts">
 /*eslint-disable*/
-import Vue from 'vue';
-import {Component} from 'vue-property-decorator';
+import {Component, Prop} from 'vue-property-decorator';
 import {mixins} from 'vue-class-component';
 import TagHelper from '@/mixins/TagHelper';
 
 @Component
 export default class Tags extends mixins(TagHelper) {
-  selectedTags: string[] = [];
+  @Prop() selectedTags!: Tag[];
 
   get tagList() {
     return this.$store.state.tagList;
@@ -32,7 +31,7 @@ export default class Tags extends mixins(TagHelper) {
     this.$store.commit('fetchTags');
   }
 
-  toggle(tag: string) {
+  toggle(tag: Tag) {
     const index = this.selectedTags.indexOf(tag);
     if (index >= 0) {
       this.selectedTags.splice(index, 1);

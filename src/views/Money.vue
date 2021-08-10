@@ -3,10 +3,9 @@
     <NumberPad :value.sync="record.amount" @submit="saveRecord"></NumberPad>
     <Tabs :data-source="recordTypeList" :value.sync="record.type"></Tabs>
     <div class="notes">
-      <FormItem field-name="备注" placeholder="在这里输入备注"
-                @update:value="onUpdateNotes"></FormItem>
+      <FormItem field-name="备注" placeholder="在这里输入备注" :value.sync="record.notes"></FormItem>
     </div>
-    <Tags></Tags>
+    <Tags @update:value="onUpdateValue" :selectedTags="value"></Tags>
   </Layout>
 </template>
 
@@ -28,6 +27,7 @@ export default class Money extends Vue {
     tags: [], notes: '', type: '-', amount: 0
   };
   recordTypeList = recordTypeList;
+  value: Tag[] = [];
 
   get recordList() {
     return this.$store.state.recordList;
@@ -37,12 +37,18 @@ export default class Money extends Vue {
     this.$store.commit('fetchRecords');
   }
 
-  onUpdateNotes(value: string) {
-    this.record.notes = value;
+  onUpdateValue(value: Tag[]) {
+    this.record.tags = value;
+    this.value = value;
   }
 
   saveRecord() {
+    if (!this.record.tags || this.record.tags.length === 0) {
+      return window.alert('请至少选择一个标签');
+    }
     this.$store.commit('createRecord', this.record);
+    this.record.notes = '';
+    this.value = [];
   }
 };
 </script>
